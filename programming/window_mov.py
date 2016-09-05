@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = np.random.randint(50,size=500)
+data = np.random.rand(10000)
 size = raw_input("input size window: ")
 size = int(size)
 
@@ -14,10 +14,10 @@ def main():
   arr = move_window(data,size)
   print arr
   fig = plt.figure()
-  ax1 = fig.add_subplot(111)
- # ax2 = fig.add_subplot(1,2,2)
-  plt.plot(data)
-  plt.plot(arr)
+  ax1 = fig.add_subplot(1,2,1)
+  ax2 = fig.add_subplot(1,2,2)
+  ax2.hist(data)
+  ax1.hist(arr)
   plt.show()
 
 if __name__ == "__main__":
