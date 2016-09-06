@@ -6,7 +6,7 @@ size = int(raw_input("input size window: "))
 
 def move_window(arr,size_win):
   temp = range(len(arr)-(size_win/2)*2)
-  return map(lambda x:np.average(arr[x:size_win+x]),temp)
+  return np.array(map(lambda x:np.average(arr[x:size_win+x]),temp))
 
 
 def main():
