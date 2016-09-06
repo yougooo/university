@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = np.random.rand(10000)
-size = int(raw_input("input size window: "))
+data = np.random.rand(100,200)
+size = raw_input("input size window: ")
+size = int(size)
 
 def move_window(arr,size_win):
   temp = range(len(arr)-(size_win/2)*2)
@@ -13,10 +14,10 @@ def main():
   arr = move_window(data,size)
   print arr
   fig = plt.figure()
-  ax1 = fig.add_subplot(1,2,1)
-  ax2 = fig.add_subplot(1,2,2)
-  ax2.plot(data)
-  ax1.plot(arr)
+  ax1 = fig.add_subplot(111)
+ # ax2 = fig.add_subplot(1,2,2)
+  plt.hist(data)
+  plt.hist(arr)
   plt.show()
 
 if __name__ == "__main__":
