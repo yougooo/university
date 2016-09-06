@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = np.random.rand(10000)
+data = np.random.rand(1000)
 size = int(raw_input("input size window: "))
 
 def move_window(arr,size_win):
   temp = range(len(arr)-(size_win/2)*2)
-  return map(lambda x:sum(arr[x:size_win+x])/size_win,temp)
+  return map(lambda x:np.average(arr[x:size_win+x]),temp)
 
 
 def main():
