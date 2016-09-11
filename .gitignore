@@ -1,0 +1,5 @@
+*.pyc
+**/.idea
+**/.ipynb_checkpoints
+.gitignore.swp
+home_work
