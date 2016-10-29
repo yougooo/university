@@ -1,0 +1,14 @@
+n x y z name
+1 23 345 34 john
+2 24 345 32 john
+3 34 234 11 eric
+4 56 123 56 suzi
+5 56 124 53 igor
+6 21 412 35 monika
+7 12 71 23 devid
+8 24 345 32 john
+9 34 234 11 henrik
+10 56 123 56 sara
+11 56 124 53 robert
+12 21 412 35 samanta
+john - 3, eric, suzi, igor, monika, devid, john, henrik, sara, robert, samanta
