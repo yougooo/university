@@ -22,7 +22,7 @@ print "+++ START TEST 5 {",
 print data.build_coder(0) == {'A': 'A', 'C': 'C', 'B': 'B', 'E': 'E', 'D': 'D', 'G': 'G', 'F': 'F', 'I': 'I', 'H': 'H', 'K': 'K', 'J': 'J', 'M': 'M', 'L': 'L', 'O': 'O', 'N': 'N', 'Q': 'Q', 'P': 'P', 'S': 'S', 'R': 'R', 'U': 'U', 'T': 'T', 'W': 'W', 'V': 'V', 'Y': 'Y', 'X': 'X', 'Z': 'Z', 'a': 'a', 'c': 'c', 'b': 'b', 'e': 'e', 'd': 'd', 'g': 'g', 'f': 'f', 'i': 'i', 'h': 'h', 'k': 'k', 'j': 'j', 'm': 'm', 'l': 'l', 'o': 'o', 'n': 'n', 'q': 'q', 'p': 'p', 's': 's', 'r': 'r', 'u': 'u', 't': 't', 'w': 'w', 'v': 'v', 'y': 'y', 'x': 'x', 'z': 'z'},
 print "} END TEST 5 +++\n"
 
-print "This test is not valide for PRD! +++ START TEST 6 {",
+print "+++ START TEST 6 {",
 print data.build_coder(-2) == {'A': 'Y', 'C': 'A', 'B': 'Z', 'E': 'C', 'D': 'B', 'G': 'E', 'F': 'D', 'I': 'G', 'H': 'F', 'K': 'I', 'J': 'H', 'M': 'K', 'L': 'J', 'O': 'M', 'N': 'L', 'Q': 'O', 'P': 'N', 'S': 'Q', 'R': 'P', 'U': 'S', 'T': 'R', 'W': 'U', 'V': 'T', 'Y': 'W', 'X': 'V', 'Z': 'X', 'a': 'y', 'c': 'a', 'b': 'z', 'e': 'c', 'd': 'b', 'g': 'e', 'f': 'd', 'i': 'g', 'h': 'f', 'k': 'i', 'j': 'h', 'm': 'k', 'l': 'j', 'o': 'm', 'n': 'l', 'q': 'o', 'p': 'n', 's': 'q', 'r': 'p', 'u': 's', 't': 'r', 'w': 'u', 'v': 't', 'y': 'w', 'x': 'v', 'z': 'x'},
 print "} END TEST 6 +++\n"
 
