@@ -3,11 +3,11 @@ import string
 class Caesar(object):
     LETTER_LOWER = string.ascii_lowercase
     LETTER_UPPER = string.ascii_uppercase
-    def __init__(self, shift=0):
-        self.shift = shift
+    def __init__(self):
         self.dict_letter = {}
 
-    def build_coder(self):
+    def build_coder(self, shift=0):
+        self.shift = shift
         """
             Returns a dict that can apply a Caesar cipher to a letter.
             The cipher is defined by the shift value. Ignores non-letter characters
@@ -24,7 +24,7 @@ class Caesar(object):
                 return abs(26 - (pos + self.shift))
             return pos + self.shift
 
-        if all([0 <= self.shift, self.shift <= 26]):
+        if all([-26 <= self.shift, self.shift <= 26]):
             self.temp = map(lambda x: (Caesar.LETTER_LOWER[x], Caesar.LETTER_LOWER[build_pos(x)]), range(len(Caesar.LETTER_LOWER)))
             for elem in self.temp:
               self.dict_letter[elem[0]] = elem[1]
@@ -32,3 +32,4 @@ class Caesar(object):
         else:
             return ValueError
         return self.dict_letter
+
