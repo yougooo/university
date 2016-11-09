@@ -30,6 +30,6 @@ class Caesar(object):
               self.dict_letter[elem[0]] = elem[1]
               self.dict_letter[elem[0].upper()] = elem[1].upper()
         else:
-            return ValueError
+            raise ValueError('wrong shift value')
         return self.dict_letter
 
