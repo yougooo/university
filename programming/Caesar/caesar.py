@@ -17,9 +17,11 @@ class Caesar(object):
             returns: dict
         """
         def build_pos(pos):
-            """help function for map definition,
+            """
+            help function for map definition,
             pos : position letter
-            return shift position"""
+            return shift position
+            """
             if pos + self.shift >= 26:
                 return abs(26 - (pos + self.shift))
             return pos + self.shift
@@ -30,6 +32,17 @@ class Caesar(object):
               self.dict_letter[elem[0]] = elem[1]
               self.dict_letter[elem[0].upper()] = elem[1].upper()
         else:
-            raise ValueError('wrong shift value')
+            return ValueError
         return self.dict_letter
 
+    def apply_coder(self, text, coder):
+        def check(letter, dic):
+            if letter in Caesar.LETTER_LOWER + Caesar.LETTER_UPPER:
+                return dic[letter]
+            else:
+                return letter
+
+        return ''.join(map(lambda x: check(x, coder), text))
+
+    def apply_shift(self, text, shift):
+        return self.apply_coder(text, self.build_coder(shift))
