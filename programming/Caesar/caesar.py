@@ -1,10 +1,13 @@
 import string
+import re
 
 class Caesar(object):
     LETTER_LOWER = string.ascii_lowercase
     LETTER_UPPER = string.ascii_uppercase
-    def __init__(self):
+    def __init__(self, words_path, shift_path):
         self.dict_letter = {}
+        self.word_file = open(words_path).read()
+        self.shift_file = open(shift_path).read()
 
     def _build_pos(self, pos):
         """
@@ -43,7 +46,34 @@ class Caesar(object):
             return letter
 
     def _apply_coder(self, text, coder):
+        
         return ''.join(map(lambda x: self._check(x, coder), text))
 
     def apply_shift(self, text, shift):
         return self._apply_coder(text, self.build_coder(shift))
+
+    def _word(self, word):
+        #print word
+        pattern = re.compile(word)
+        if pattern.search(self.word_file):
+            return 1
+        return 0
+
+    def expresion(self, exp):
+        temp = map(lambda x: self._word(x), exp.split())
+        #for i in exp.split():
+        #    print i
+        #    print self._word(i)
+        return sum(temp)
+
+    def best_shift(self):
+        shift_all = map(lambda x: self.expresion(self.apply_shift(self.shift_file, x)), range(27))
+        #for best in range(27):
+        print self.shift_file
+        print shift_all
+        print len(self.shift_file)
+        return shift_all.index(max(shift_all))
+
+shift = Caesar('words.txt', 'story.txt')
+
+print shift.best_shift()
