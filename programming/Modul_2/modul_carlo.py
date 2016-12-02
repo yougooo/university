@@ -36,8 +36,10 @@ class MonteCarlo(object):
     def plot_line(self):
         fig = plt.figure()
         ax = fig.add_subplot(111)
+        #ax.axis([5, 5, 30, 30])
         ax.plot(self.x, self.y)
         ax.plot(self.x, self.value())
+        ax.scatter(self.x, self.y)
         plt.show()
 
 
