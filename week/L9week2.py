@@ -9,15 +9,17 @@ def game(size=100):
     if asw == 'low':
       arr = arr[:arr.index(random_num)]
       print arr
+    elif len(arr) == 2:
+      print arr
     elif asw == 'higth':
       arr = arr[arr.index(random_num):]
       print arr
     elif asw == 'correct':
       print 'game end, your number was {0}'.format(random_num)
-      break
+      break      
     else:
       print 'input error'
-      continue 
+      continue
     random_num = random.choice(arr)
     print 'your number is {0}?'.format(random_num)
 
